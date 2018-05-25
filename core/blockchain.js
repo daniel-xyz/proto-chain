@@ -13,6 +13,10 @@ class Blockchain {
 
         return block
     }
+
+    isValidChain(chain) {
+        return JSON.stringify(chain[0]) === JSON.stringify(Block.genesis())
+    }
 }
 
 module.exports = Blockchain
