@@ -1,12 +1,13 @@
 {
   "name": "proto-chain",
   "version": "1.0.0",
-  "description":
-    "A project based on David Katz' Tutorial on how to build a Blockchain on Node.js",
+  "description": "A project based on David Katz' Tutorial on how to build a Blockchain on Node.js",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "dev-test": "nodemon ./test/dev-test"
+    "dev-test": "nodemon ./test/dev-test",
+    "start": "node ./app",
+    "dev": "nodemon ./app"
   },
   "keywords": [],
   "author": "Daniel Bischoff",
@@ -16,6 +17,7 @@
     "nodemon": "^1.17.2"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.3"
   }
 }
