@@ -20,6 +20,8 @@ app.post('/mine', (req, res) => {
 
   console.log(`New block added: ${Block.toString()}`)
 
+  p2pServer.syncChains()
+
   res.redirect('/blocks')
 })
 
