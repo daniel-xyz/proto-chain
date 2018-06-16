@@ -15,6 +15,12 @@ const p2pServer = new P2pServer(bc, tp)
 
 app.use(bodyParser.json())
 
+app.get('/public-key', (req, res) => {
+  res.json({
+    publicKey: wallet.publicKey,
+  })
+})
+
 app.get('/blocks', (req, res) => {
   res.json(bc.chain)
 })
